@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Digital Agency</title>
+    <script src="https://kit.fontawesome.com/8c15bc3100.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="navbar-brand">Digital Agency</a>
+        <nav class="navbar">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fa fa-bars menu"></i>
+          <!-- <i class="fab fa-x"></i> -->
+        </div>
+    </header>
+    <main>
+      <section class="wrapper">
+        <div class="banner">
+          <h1 class="brand-heading">Welcome</h1>
+          <p class="intro-text"><strong>Digital Agency</strong> is here for all of your technology, advertising, SEO and marketingneed</p>
+          <button class="btn btn-explore">Explore</button>
+        </div>
+      </section>
+      
+      <section id="clients" class="clients-section">
+        <h2>Our Clients</h2>
+        <div class="clients">
+          <img src="images/partner1.png"> 
+          <img src="images/partner2.png"> 
+          <img src="images/partner3.png"> 
+          <img src="images/partner4.png"> 
+          <img src="images/partner5.png"> 
+          <img src="images/partner6.png"> 
+        </div>
+      </section>
+
+      <section id="about" class="about-section">
+        <div class="about-section">
+          <div class="about">
+            <h2>Who Are We?</h2>
+            <p class="lead"><strong>Digital Agency</strong> is one of the lead digital marketing firms on the east coast. We are made up ofseasoned professionals with a ton of experience.</p>
+            <a href="#contact" class="btn btn-contact">Contact Us Now</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="container">
+        <h2 class="services-heading">Why Choose Us?</h2>
+        <p class="services-text">Here are just a few reasons to choose <strong>Digital Agency</strong> for all of your  digital marketingneeds</p>
+        <br>
+        <div class="services">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+              <div class="card-body">
+                <h3>Professional</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-money"></i>
+              </div>
+              <div class="card-body">
+                <h3>Low Cost</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-dashboard"></i>
+              </div>
+              <div class="card-body">
+                <h3>Fast</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+  
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-gear"></i>
+              </div>
+              <div class="card-body">
+                <h3>Resources & Tools</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-users"></i>
+              </div>
+              <div class="card-body">
+                <h3>Large Community</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fa fa-book"></i>
+              </div>
+              <div class="card-body">
+                <h3>Online Courses</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="contact">
+        <h3>Contact Us</h3>
+        <p class="lead">We are here to help you with all of your digital marketing needs. Feel free to contact us anytime.</p>
+        <div class="contact-content">
+          <div class="contact-section">
+            <form action="index.html" method="post">
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname">
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="radio" class="form-control" name="gender" value="male"> Male
+                <input type="radio" class="form-control" name="gender" value="female"> Female
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <select name="companies" id="company">
+                  <option value="workruit">Workruit</option>
+                  <option value="enevelope">Enevelope</option>
+                  <option value="digital">Digital</option>
+                  <option value="wideangle">Wideangle</option>
+                  <option value="mega">Mega</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form-control" id="dob">
+              </div>
+              <button type="submit" class="btn btn-send">Send</button>
+            </form>
+          </div>
+          <div class="social-links">
+            <div class="social-address">
+              <h2 class="address-title">
+                <i class="fa fa-map-marker"></i>
+                <span>ADDRESS:</span>
+              </h2>
+              <div class="address">
+                <p>Digital Agency.</p>
+                <p>12345 Street Name.</p>
+                <p>City, State, Zip.</p>
+              </div>
+            </div>
+            <ul class="social-icons">
+             <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+             <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+             <li><i class="fa fa-snapchat-square" aria-hidden="true"></i></li>
+             <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="top-footer">
+        <!-- footer item 1 -->
+        <!-- <div class="footer-item">
+          <h2 class="footer-title">ADDRESS</h2>
+          <div class="footer-items">
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+          </div>
+        </div> -->
+        <!-- footer item 2 -->
+        <div class="footer-item">
+          <h2 class="footer-title">SERVICES</h2>
+          <div class="footer-items">
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+          </div>
+        </div>
+        <!-- footer item 3 -->
+        <div class="footer-item">
+          <h2 class="footer-title">SUPPLIERS</h2>
+          <div class="footer-items">
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+          </div>
+        </div>
+        <!-- footer item 4 -->
+        <div class="footer-item">
+          <h2 class="footer-title">INVESTMENT</h2>
+          <div class="footer-items">
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+            <h4>Lorem, ipsum dolor.</h4>
+          </div>
+        </div>
+      </div>
+      <div class="end-footer">
+        <div class="copyright">copyright © 2022 - Present • <b>DIGITAL AGENCY</b></div>
+        <a class="designer" href="#">Ravindra Reddy</a>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

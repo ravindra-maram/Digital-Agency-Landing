@@ -1,0 +1,851 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIABLE ================ */
+:root {
+    --primary-color: #FFDB15;
+    --primary-color-alt: #8a7400;
+    --secondary-color: #fbfbfb;
+    --secondary-color-alt: hsl(12, 14%, 93%);
+    --dark-color: #000;
+    --white-color: #fff;
+}
+  
+/* ================= BASE ==================== */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -- BODY -- */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--white-color);
+}
+  
+/* ================= HEADER ================ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  color: var(--dark-color)
+}
+
+.navbar-brand {
+  color: var(--dark-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 2rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  color: var(--dark-color);
+}
+
+.nav-link::before {
+  content: "";
+  background: var(--dark-color);
+  width: 100%;
+  height: 0.05rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 150ms;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu {
+  cursor: pointer;
+  display: none !important;
+}
+
+/* -- MAIN  -- */
+
+/* ================= BANNER ================ */
+
+.wrapper {
+  background: url(./images/intro-bg.jpg) no-repeat bottom center scroll;
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.brand-heading{
+	font-size: 3rem;
+  font-weight: 100;
+}
+
+.intro-text{
+	font-size: 1.2rem;
+}
+
+.btn-explore {
+  background-color: var(--dark-color);
+  border-radius: 2px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  padding: 6px 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  border: none;
+  border: 1px solid var(--primary-color-alt);
+}
+
+/* ========== CLIENT ========== */
+
+#clients {
+	text-align: center;
+  padding: 40px 20px;
+}
+
+#clients h2 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.clients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+
+/* ========== ABOUT ========= */
+
+.about-section {
+  width: 100%;
+	padding: 40px 0;
+	color: #fff;
+	background: url(./images/downloads-bg.jpg) no-repeat center center scroll;
+	background-size:cover;
+  text-align: center;
+}
+
+.about-section h2 {
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.about-section p {
+  margin-bottom: 20px;
+}
+
+.btn-contact {
+  background-color: var(--dark-color);
+  border-radius: 2px;
+  font-size: 1rem;
+  color: var(--primary-color);
+  padding: 6px 16px;
+  border: 1px solid var(--primary-color-alt);
+}
+
+/* ========== SERVICES ==========*/
+
+#services {
+  max-width: 80%;
+  text-align: center;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+#services h2 {
+  text-decoration: underline;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #FFDB15;
+  border-radius:10px;
+  margin:0 1.66%;
+  padding:10px;
+  width:30%;
+  text-align:center;
+  margin-top: 10px;
+}
+
+.card i {
+  font-size: 40px;
+  margin-top: 15px;
+}
+
+.card h3{
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.card p {
+  font-size: 12px;
+  line-height: 24px;
+} 
+
+/* ========== CONTACT ========= */
+
+#contact {
+  padding: 20px;
+  background-color: var(--dark-color);
+  text-align: center;
+  color: var(--primary-color-alt);
+}
+
+#contact h3 {
+  text-decoration: underline;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+}
+
+.contact-section {
+  width: 60%;
+}
+
+.form-group {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.contact-section label {
+  float: left;
+  width: 15%;
+}
+
+.contact-section input{
+  border : 0px solid #fff;
+  border-bottom-width : 1px;
+  outline: none;
+  background-color: transparent;
+  width: 50%;
+  caret-color: red;
+  margin-left: 15px;
+}
+
+input[type='radio'] {
+  width: auto;
+}
+
+#company {
+  width: 50%;
+  padding: 3px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+.btn-send {
+  display: block;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color:#FFDB15;
+  box-shadow:2px 2px 2px #8a7400;
+  color:black;
+  position:relative;
+  transition:all 0.1s ease;
+  border: none;
+  width: calc(65% + 15px);
+}
+
+.btn-send:hover {
+  box-shadow:0 0 0 #8a7400;
+  transform: translate(2px, 2px);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 40%;
+}
+
+.social-address {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+}
+
+.social-address h2 {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.social-icons i{
+  border-radius: 50%;
+  color: #000;
+  background-color: #FFDB15;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 12px  rgba(0,0,0,0.09);
+}
+
+.social-icons i:hover {
+  opacity: .5;
+}
+
+/* ========== FOOTER ========== */
+
+.top-footer {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2rem .7rem;
+}
+
+.footer-title {
+  font-size: 1rem;
+  padding: 1rem 0;
+  text-decoration: underline;
+}
+
+.footer-items h4:hover{
+  text-decoration: underline;
+  color: #777;
+  font-size: .8rem;
+}
+
+.end-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-color);
+}
+.copyright {
+  color: var(--primary-color);
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+.copyright b {
+  font-weight: inherit;
+  font-size: 0.9rem;
+}
+.designer {
+  color: hsla(0, 0%, 98%, 0.541);
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.designer:hover {
+  text-decoration: underline;
+}
+
+/********************* MEDIA QUERIES *********************/
+@media screen and (max-width: 768px) {
+  /* ========== HEADER ========== */
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar {
+    background-color: var(--dark-color);
+    position: absolute;
+    top: 2.4rem;
+    right: 0;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 500ms;
+  }
+
+  .show-navbar {
+    display: flex;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 300ms;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    display: block;
+  }
+  
+  .nav-link::before {
+    background: var(--primary-color-alt);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: block !important;
+  }
+
+  /* ========== BANNER ==========*/
+
+  .banner {
+    min-height: 60vh;
+    object-fit: cover;
+    text-align: center;
+  }
+  
+  .brand-heading{
+    font-size: 2.8rem;
+    font-weight: 100;
+    margin-bottom: .6rem
+  }
+  
+  .intro-text{
+    font-size: 1rem;
+    margin-bottom: .6rem
+  }
+  
+  .btn-explore {
+    background-color: var(--dark-color);
+    font-size: 1rem;
+    color: var(--primary-color);
+    padding: 6px 16px;
+    border: 1px solid var(--primary-color-alt);
+  }
+
+  /* ========== CLIENT ========== */
+
+  #clients {
+    background-color: var(--secondary-color);
+    padding: 30px 15px;
+  }
+
+  .clients img {
+    margin: 10px;
+  }
+
+  /* ========== ABOUT ========= */
+
+  .about-section {
+  	padding: 20px 10px;
+    object-fit: cover;
+  }
+
+  .about-section h2 {
+    font-weight: 200;
+  }
+
+  .about-section p {
+    font-weight: 100;
+    margin-bottom: 20px;
+  }
+
+  .btn-contact a {
+    background-color: var(--dark-color);
+    font-size: 1rem;
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border: 1px solid var(--primary-color-alt);
+  }
+
+  /* ========== SERVICES ==========*/
+
+  #services {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #services h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    margin: 0 1.22%;
+    padding: 6px;
+    margin-top: 8px;
+  }
+
+  .card i {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .card h3{
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .card p {
+    font-size: 12px;
+    line-height: 18px;
+  } 
+
+  /* ========== CONTACT ========= */
+
+  #contact {
+    padding: 15px;
+    color: var(--dark-color);
+    color: var(--primary-color-alt);
+  }
+
+  #contact h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #contact p {
+    font-size: 16px;
+  }
+
+  .contact-content {
+    width: 100%;
+  }
+
+  .contact-section {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .form-group {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .contact-section label {
+    /* float: left; */
+    width: 30%;
+  }
+
+  .contact-section input{
+    width: 70%;
+    color: var(--white-color);
+  }
+
+  input[type='radio'] {
+    width: auto;
+  }
+
+  #company {
+    width: 70%;
+  }
+
+  .btn-send {
+    display: block;
+    padding: 6px 16px;
+    width: calc(65% + 15px);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-links {
+    border-top: 2px solid #aeaeae;
+    /* border-top-width: 100%; */
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .social-address {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-address p {
+    line-height: 1.5;
+  }
+
+  .social-address h2 {
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-right: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .social-icons i{
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 1.3;
+    font-size: 1rem;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  /* ========== FOOTER ========== */
+
+  .top-footer {
+    background-color: var(--secondary-color);
+    padding: 1rem .5rem;
+  }
+
+  .footer-title {
+    font-size: .8rem;
+    text-decoration: underline;
+  }
+
+  .footer-items h4 {
+    font-size: .8rem;
+  }
+
+  .footer-items h4:hover{
+    text-decoration: underline;
+    color: #777;
+    font-size: .6rem;
+  }
+
+  .end-footer {
+    background-color: var(--dark-color);
+    color: var(--primary-color)
+  }
+  .copyright {
+    padding: .6rem 0;
+    font-size: 0.8rem;
+  }
+  .copyright b {
+    font-weight: inherit;
+    font-size: 0.9rem;
+  }
+
+  .designer {
+    color: hsla(0, 0%, 98%, 0.541);
+    padding-bottom: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .designer:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  /* ========== HEADER ========== */
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  /* ========== BANNER ==========*/
+  .wrapper {
+    padding: 0 .4px;
+  }
+
+  .banner {
+    min-height: 60vh;
+    object-fit: cover;
+    text-align: center;
+  }
+  
+  .brand-heading{
+    font-size: 2rem;
+    margin-bottom: .4rem
+  }
+  
+  .intro-text{
+    font-size: .8rem;
+    margin-bottom: .4rem
+  }
+  
+  .btn-explore {
+    font-size: .8rem;
+    padding: 4px 12px;
+  }
+
+  /* ========== CLIENT ========== */
+
+  #clients {
+    background-color: var(--secondary-color);
+    padding: 20px 10px;
+  }
+
+  .clients img {
+    margin: 6px;
+  }
+
+  /* ========== ABOUT ========= */
+
+  .about-section {
+  	padding: 20px 8px;
+    object-fit: cover;
+  }
+
+  .about-section h2 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+  }
+
+  .about-section p {
+    margin: 10px 0;
+    font-size: 0.8rem;
+  }
+
+  .btn-contact {
+    font-size: .8rem;
+    color: var(--primary-color);
+    padding: 4px 12px;
+  }
+
+  /* ========== SERVICES ==========*/
+
+  #services {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #services h2 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  #services p {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    padding: 20px;
+    width: 100%;
+  }
+
+  /* ========== CONTACT ========= */
+
+  #contact {
+    padding: 14px;
+  }
+
+  #contact h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  #contact p {
+    font-size: 12px;
+  }
+
+  .contact-content {
+    margin: 0;
+  }
+
+  .contact-section {
+    width: 100%;
+  }
+
+  .contact-section label {
+    font-size: .8rem;
+  }
+
+  .contact-section input{
+    font-size: .8rem;
+  }
+
+  .btn-send {
+    display: block;
+    padding: 6px 16px;
+    width: calc(65% + 15px);
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: .8rem;
+  }
+
+  .social-address p {
+    line-height: 1.5;
+  }
+
+  .social-address h2 {
+    font-size: .8rem;
+    margin-right: 15px;
+  }
+
+  .social-icons i{
+    font-size: 1rem;
+    margin-right: 15px;
+  }
+
+  /* ========== FOOTER ========== */
+
+  .top-footer {
+    padding: .8rem .5rem;
+  }
+
+  .footer-title {
+    font-size: .7rem;
+  }
+
+  .footer-items h4 {
+    font-size: .7rem;
+  }
+
+  .footer-items h4:hover{
+    font-size: .6rem;
+  }
+
+  .copyright {
+    padding: .4rem 0;
+    font-size: 0.7rem;
+  }
+  .copyright b {
+    font-weight: inherit;
+    font-size: .9rem;
+  }
+
+  .designer {
+    padding-bottom: 0.4rem;
+    font-size: 0.7rem;
+  }
+}
